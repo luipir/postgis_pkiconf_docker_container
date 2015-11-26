@@ -3,8 +3,8 @@ FROM busybox
 # guid and uid are set the same for the kartooza/postgis container
 RUN addgroup -g 111 postgres \
     && adduser -H -D -G postgres -u 106 postgres
-# create the volume path where to store configuratio
-RUN mkdir -p /etc/postgresql/9.4/main/
+# create the volume path where to store configuration
+RUN mkdir -p /etc/postgresql/9.4/main/ssl
 # populate configuration
 ADD ./environment /etc/postgresql/9.4/main/
 ADD ./pg_ctl.conf /etc/postgresql/9.4/main/
@@ -12,7 +12,6 @@ ADD ./pg_hba.conf /etc/postgresql/9.4/main/
 ADD ./pg_ident.conf /etc/postgresql/9.4/main/
 ADD ./postgresql.conf /etc/postgresql/9.4/main/
 ADD ./start.conf /etc/postgresql/9.4/main/
-RUN mkdir -p /etc/postgresql/9.4/main/ssl
 ADD ./ssl /etc/postgresql/9.4/main/ssl
 # cheange permission to all copied files
 RUN chown -R postgres:postgres /etc/postgresql
