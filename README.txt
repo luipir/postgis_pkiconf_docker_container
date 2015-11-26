@@ -1,3 +1,8 @@
+# this data-container is configured to setup pki for kartooza/postgis container
+# is configured to have server certificate signed with CA from:
+# https://github.com/qgis/QGIS/tree/master/tests/testdata/auth_system/certs_keys
+# all certificats and key are in the ssl path
+
 # build configuration image base to create data-container
 # cd in the path where is located "Dockerfile"
 docker build -t postgis-config-image .
