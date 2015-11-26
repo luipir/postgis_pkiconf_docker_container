@@ -1,3 +1,5 @@
+# PRELIMINARY VERSION NOT CONFIRMED TO WORK FOR:
+#
 # this data-container is configured to setup pki for kartooza/postgis container
 # is configured to have server certificate signed with CA from:
 # https://github.com/qgis/QGIS/tree/master/tests/testdata/auth_system/certs_keys
