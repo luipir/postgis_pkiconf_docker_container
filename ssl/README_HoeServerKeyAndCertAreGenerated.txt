@@ -21,7 +21,7 @@ openssl rsa -in postgis_server_key.key
 # hitting return key to every answer => no pwd added
 openssl req -new -key postgis_server_key.key -out postgis_server_key.req
 
-# generate certificate basing on request ans signed by common CA with our client
+# generate certificate basing on request and signed by common CA with our client
 openssl x509 \
 	-req -in postgis_server_key.req \
 	-CA ../ssl/certs/root_ca_cert.crt -CAkey ../ssl/private/root_ca_key.key \
