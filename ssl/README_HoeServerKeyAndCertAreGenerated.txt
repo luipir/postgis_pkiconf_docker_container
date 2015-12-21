@@ -1,5 +1,5 @@
 # HOW SERVER KEY AND CERT ARE GENERATED
-# Basing on CA crt and key of teh QGIS Auth test suite:
+# Basing on CA crt and key of the QGIS Auth test suite:
 # https://github.com/qgis/QGIS/tree/master/tests/testdata/auth_system/certs_keys
 # other useful links are:
 # How to convert .pem to .crt
