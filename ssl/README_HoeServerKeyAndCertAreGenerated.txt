@@ -28,8 +28,9 @@ openssl req -in postgis_server_key.req -text -verify -noout
 # generate certificate basing on request and signed by common CA with our client
 openssl x509 \
 	-req -in postgis_server_key.req \
-	-CA ../ssl/certs/root_ca_cert.crt -CAkey ../ssl/private/root_ca_key.key \
-	-CAcreateserial -out postgis_server_cert.crt
+	-CA ../certs/root_ca_cert.crt -CAkey ../private/root_ca_key.key -CAcreateserial
+	-days 3500
+	-out postgis_server_cert.crt
 
 # how to verify and read certificate
 openssl x509 -noout -text -in postgis_server_cert.crt
