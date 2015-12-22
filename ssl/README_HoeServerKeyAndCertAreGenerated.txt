@@ -33,7 +33,8 @@ openssl x509 \
 	-out postgis_server_cert.crt
 
 # how to verify and read certificate
-openssl x509 -noout -text -in postgis_server_cert.crt
+method 1) openssl x509 -noout -text -in postgis_server_cert.crt
+method 2) openssl verify -verbose -purpose any postgis_server_cert.crt
 
 
 
