@@ -15,8 +15,8 @@
 # generate server private key with 2048 bit 
 openssl genrsa -out postgis_server_key.key 2048
 
-# how to verify key
-openssl rsa -check -in postgis_server_key.key
+# how to verify key. Would return RSA key ok
+openssl rsa -noout -check -in postgis_server_key.key
 
 # generate a request for the public key
 # hitting return key to every answer => no pwd added
