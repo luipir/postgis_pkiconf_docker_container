@@ -16,7 +16,6 @@ ADD ./pg_hba.conf /etc/postgresql/9.4/main/
 ADD ./pg_ident.conf /etc/postgresql/9.4/main/
 ADD ./postgresql.conf /etc/postgresql/9.4/main/
 ADD ./start.conf /etc/postgresql/9.4/main/
-ADD ./ssl /etc/postgresql/9.4/main/ssl
 
 # cheange permission to all copied files
 RUN chown -R postgres:postgres /etc/postgresql
