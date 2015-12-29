@@ -36,5 +36,13 @@ openssl x509 \
 method 1) openssl x509 -noout -text -in postgis_server_cert.crt
 method 2) openssl verify -verbose -purpose any postgis_server_cert.crt
 
+# client and server certificates has to be hashed and linked
+# link and installation path depend on if certificate is for server or client
+# more info:
+# server: http://www.postgresql.org/docs/9.4/static/ssl-tcp.html
+# client: http://www.postgresql.org/docs/9.4/static/libpq-ssl.html
+openssl x509 -hash -in  <your cert> | head -n 1
+ln -s <yout cert> <the value of the previous command>
+
 
 
