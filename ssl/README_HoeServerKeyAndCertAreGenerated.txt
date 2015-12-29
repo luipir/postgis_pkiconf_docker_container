@@ -9,6 +9,9 @@
 # How to convert .pem into .key
 # 	http://stackoverflow.com/questions/19979171/how-to-convert-pem-into-key
 #	e.g: openssl rsa -outform der -in fra_cert.pem -out fra_key.key
+#
+# Postgres troubleshooting matrix
+# 	http://www.pontifier.com/?p=45
 
 # most of info get from http://postgresql.nabble.com/SSL-auth-problem-td1898656.html
 
