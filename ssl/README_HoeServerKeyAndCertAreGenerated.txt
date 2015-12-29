@@ -39,6 +39,11 @@ openssl x509 \
 method 1) openssl x509 -noout -text -in postgis_server_cert.crt
 method 2) openssl verify -verbose -purpose any postgis_server_cert.crt
 
+# how to verify that a cert is valid for a specified CA
+# would produce the following result:
+# <cert to verify>: OK
+openssl verify -verbose -purpose any -CAfile <ca cert file> <cert to verify>
+
 # client and server certificates has to be hashed and linked
 # link and installation path depend on if certificate is for server or client
 # more info:
@@ -46,6 +51,3 @@ method 2) openssl verify -verbose -purpose any postgis_server_cert.crt
 # client: http://www.postgresql.org/docs/9.4/static/libpq-ssl.html
 openssl x509 -hash -in  <your cert> | head -n 1
 ln -s <yout cert> <the value of the previous command>
-
-
-
