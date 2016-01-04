@@ -1,7 +1,9 @@
-# HOW SERVER KEY AND CERT ARE GENERATED
+# HOW SERVER KEY AND CERT CAN BE GENERATED
 # Basing on CA crt and key of the QGIS Auth test suite:
 # https://github.com/qgis/QGIS/tree/master/tests/testdata/auth_system/certs_keys
 # other useful links are:
+# Postgres troubleshooting matrix
+# 	http://www.pontifier.com/?p=45
 # How to convert .pem to .crt
 # 	http://stackoverflow.com/questions/13732826/convert-pem-to-crt-and-key
 #	e.g: openssl x509 -outform pem -in fra_cert.pem -out fra_cert.crt
@@ -10,9 +12,8 @@
 # 	http://stackoverflow.com/questions/19979171/how-to-convert-pem-into-key
 #	e.g: openssl rsa -outform der -in fra_cert.pem -out fra_key.key
 #
-# Postgres troubleshooting matrix
-# 	http://www.pontifier.com/?p=45
-
+# BTW cert.pem and key.pem can be used instead of extracting crt and key from pem
+#
 # most of info get from http://postgresql.nabble.com/SSL-auth-problem-td1898656.html
 
 # generate server private key with 2048 bit 
@@ -51,3 +52,4 @@ openssl verify -verbose -purpose any -CAfile <ca cert file> <cert to verify>
 # client: http://www.postgresql.org/docs/9.4/static/libpq-ssl.html
 openssl x509 -hash -in  <your cert> | head -n 1
 ln -s <yout cert> <the value of the previous command>
+
