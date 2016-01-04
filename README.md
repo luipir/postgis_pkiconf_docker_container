@@ -21,3 +21,8 @@ in other containers with `--volumes-from` option:
 Run postgis getting config data from the volume of the data-container
 * $> `docker run --rm -v <your permanent DBDATA >:/var/lib/postgresql/9.4/main --volumes-from postgis-config-container	--name "postgis" -p 25432:5432 -t kartoza/postgis`
 
+## Enable client to connect using SSL certificates
+Detailes can be found in the following document:
+* ./blob/master/README_HowtoSetupClientCert.md
+
+
