@@ -23,6 +23,6 @@ Run postgis getting config data from the volume of the data-container
 
 ## Enable client to connect using SSL certificates
 Detailes can be found in the following document:
-* ./README_HowtoSetupClientCert.md
+* README_HowtoSetupClientCert.md
 
 
