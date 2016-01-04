@@ -23,6 +23,6 @@ Run postgis getting config data from the volume of the data-container
 
 ## Enable client to connect using SSL certificates
 Detailes can be found in the following document:
-* README_HowtoSetupClientCert.md
+* https://github.com/luipir/postgis_pkiconf_docker_container/blob/master/README_HowtoSetupClientCert.md
 
 
