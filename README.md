@@ -8,7 +8,7 @@ all certificats and keys are in the ssl path.
 ## How to build data container
 Build configuration base image to create data-container:
 * `cd` in the path where is located "Dockerfile"
-* execute $> `docker build -t postgis-config-image`
+* execute $> `docker build -t postgis-config-image .`
 
 This will generate an image tagged as `postgis-config-image`
 
